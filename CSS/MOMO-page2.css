@@ -1,0 +1,81 @@
+body{
+    background-color:#99DAC9;
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    
+
+}
+/* Importing google fonts using import */
+  @import url('https://fonts.googleapis.com/css2?family=Inder&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  *{
+    font-family: 'Inder', sans-serif;
+  }
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#container{
+    display:flex;
+    flex-direction: column;
+    background-color:rgb(244, 244, 244);
+    width:200px;
+    padding:50px 50px 50px 50px ;
+    align-items: center;
+}
+#circular-progress{
+    position:relative;
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+    background: conic-gradient(grey 3.6deg, #99DAC9 0deg);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+#circular-progress::before{
+    content:"";
+    position:absolute;
+    height:210px;
+    width:210px;
+    border-radius: 50%;
+    background-color:white;
+}
+#progress-Value{
+    color:black;
+    font-size:20px;
+    position:relative;
+}
+
+
+/* lower section css including numbers and add more obption */
+#lower-part{
+    display:flex;
+    
+}
+#number{
+    display:flex;
+}
+#number-text{
+    font-weight: bold;
+}
+
+#number-row{
+    background-color: grey;
+    width:13px;
+    height:13px;
+    margin-top:20px;
+    margin-left:10px;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+#add-More{
+    margin-left:40px;
+    color:#99DAC9
+}
