@@ -33,7 +33,14 @@
         <button id="pdf-btn">DOWNLOAD PDF</button>
     </div>
     <script>
-      console.log(meterValue
+      const total = localStorage.getItem('totalValue');
+      console.log(total);
+
+      let result=document.querySelector(".First-part")
+      let inner=result.querySelector(".empty");
+      
+      inner.innerHTML=total;
+
     </script>
         
 </body>

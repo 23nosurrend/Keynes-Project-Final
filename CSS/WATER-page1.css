@@ -7,27 +7,40 @@
 body{
     background-color:rgb(153,218,201);
 }
+#container{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top:50px;
+    align-items: center;
+    /* border:2px solid black; */
+    width:100%;
+    height:100%;
+}
 #know-your-bill{
+    /* width:300px; */
+    position: absolute;
+    margin-left: 40px;
     
-    margin-left:100px;
-    margin-top:20px;
-    width:300px;
+    
+   
+}
+#water-bill{
+    position:absolute;
+    margin-top:70px;
+    margin-left:15px;
 }
 
-#water-bill{
-    position:relative;
-    margin-top: 50px;
-    padding-left:100px ;
-    
-}
+
 
 #price{
-     background-color:white; 
+    background-color:white; 
     width:200px;
     height:300px;
     border-radius: 40px;
-    position:relative;
-    margin-left:8px;
+    /* position:absolute;
+    justify-content: center;
+    align-items: center; */
     
 }
 
@@ -41,10 +54,9 @@ path{
     stroke-width:5px;
     stroke-dasharray: 310;  
 }
-#price{
-    margin-top:30px;
-}
+
 svg{
+    position: absolute;
     margin-top: -50px;
     padding-top: -50px;
     position: relative;
@@ -69,10 +81,10 @@ svg{
 }
 #btn-bill-div{
     
-    position:relative;
+    position:absolute;
     align-items: center;
-    margin-left:150px;
-    margin-top: 50px;
+    justify-content: center;
+    margin-top: 420px;
    
 }
 #btn-bill{
@@ -85,14 +97,19 @@ svg{
 
 
 
+
 /* MEDIA QUERRIES ABOUT WATER BILL SECTION */
-/* @media only screen and (min-width: 768px) {
-    #know-your-bill{
-    
-        margin-left:300px;
-        margin-top:20px;
-        width:800px;
-        font-size: 30px;
+@media only screen and (min-width: 768px) {
+    #price{
+        background-color:white; 
+        width:200px;
+        height:300px;
+        border-radius: 40px;
+        /* position:absolute;
+        justify-content: center;
+        align-items: center; */
+        
     }
     
-  } */
+
+}

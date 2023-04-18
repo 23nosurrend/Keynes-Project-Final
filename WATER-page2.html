@@ -9,9 +9,10 @@
 </head>
 <body>
     <div id="enter">
-        <div id="enter-1"><p>ENTER YOUR METER CUBE</p>
+        <div id="enter-1">
+            <p>ENTER YOUR METER CUBE</p>
         </div>
-        <div id="enter-form">
+         <div id="enter-form">
             <div class="form-content" id="form-content-0">
                 <p style="color:#D9D9D9;font-weight: bold;">CURRENT PRICE</p>
             </div><br>
@@ -21,33 +22,42 @@
             <div id="form-content-meter">
                 <p style="color:#D9D9D9;font-weight: bold;">METER CUBE</p>
             </div> <br><br>
-            <div id="form-content-1">
+             <div id="form-content-1">
                 <form>
                     <label for="text-input"></label>
-                    <input type="text" id="text-input">
+                    <input type="text" id="text-input" >
                 </form>
             </div>
         </div>
         <div>
             <a href="./WATER-page3.html">
+
                 <button id="calculate">CALCULATE</button>
             </a>
+            
             
         </div>
     </div>
     <script>
-        const form=document.getElementById("form-content-1");
-        const inputField=document.getElementById("text-input");
-        const MeterValue=inputField.value;
-        console.log(MeterValue);
+        // const form=document.getElementById("form-content-1");
+        // const inputField=document.getElementById("text-input");
+        // const MeterValue=inputField.value;
+        // console.log(MeterValue);
 
         const calculateBtn = document.getElementById("calculate");
+        
 
         calculateBtn.addEventListener("click", function() {
             const inputField = document.getElementById("text-input");
-            const meterValue = inputField.value;
-            console.log(meterValue);
+            let meterValue = inputField.value;
+             let price=500;
+            const total=price*meterValue;
+            console.log(total)
+            localStorage.setItem('totalValue', total);
+
+            
         });
+        
     </script>
     
 
