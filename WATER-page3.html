@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css"  href="/Keynes-Project-Final/CSS/WATER-page3.css">
+    <link rel="stylesheet"  type="text/css"  href="./CSS/WATER-page3.css">
     <title>Your water Bill</title>
 </head>
 <body>
@@ -33,7 +33,14 @@
         <button id="pdf-btn">DOWNLOAD PDF</button>
     </div>
     <script>
-      console.log(meterValue
+      const total = localStorage.getItem('totalValue');
+      console.log(total);
+
+      let result=document.querySelector(".First-part")
+      let inner=result.querySelector(".empty");
+      
+      inner.innerHTML=total;
+
     </script>
         
 </body>

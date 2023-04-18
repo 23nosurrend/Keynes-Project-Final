@@ -36,7 +36,11 @@ body{
     width:150px;
     height:30px;
     border-radius: 10px;
-    position:relative
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 #download-pdf-btn{
     margin-left:103px;
