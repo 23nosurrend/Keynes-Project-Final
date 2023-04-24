@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet"  type="text/css"   href="./CSS/MOMO-page1.css">
+
+    <script src='https://unpkg.com/tesseract.js@v2.0.2/dist/tesseract.min.js'></script>
     <title>MOMO-PAGE_1</title>
 </head>
 <head>
@@ -21,8 +23,13 @@
                 <i  class='bx bx-image-add'></i>
             </div>
             <div id="div-btn">
+                <input type="file" id="file-input" style="display: none;">
+                    <button class="btn-1" onclick="document.getElementById('file-input').click()">UPLOAD </button>
+                <!-- <a href="./MOMO-page2.html">
+                    <input type="file" id="file-input" style="display: none;">
+                    <button class="btn-1" onclick="document.getElementById('file-input').click()">UPLOAD </button>
+                </a> -->
                 
-                <button class="btn-1">UPLOAD </button>
             </div>
             
         </div>
@@ -31,16 +38,44 @@
                 <a href="./MOMO-page2.html">
                     <button class="btn-2">PASTE YOUR SMS</button> 
                 </a>
-                
             </div>
-            
         </div>
-
-
-
-
-
     </div>
+    <script>
+const fileInput = document.getElementById('file-input');
+const btn = document.querySelector('.btn-1');
+console.log("hello")
+
+
+// add event listener to the file input
+fileInput.addEventListener('change', handleFileSelect);
+
+function handleFileSelect(event) {
+  const selectedFile = event.target.files[0];
+  console.log(selectedFile);
+
+  const reader = new FileReader();
+  reader.readAsDataURL(selectedFile);
+  reader.onload = function() {
+    const dataURL = reader.result;
+    // call Tesseract.recognize with the data URL
+    Tesseract.recognize(
+      dataURL,
+      'eng',
+      { logger: m => console.log(m) }
+    ).then(({ data: { text } }) => {
+      
+      console.log(text);
+      
+    });
+  };
+}
+
+
+
+
+
+    </script>
 
     
 </body>
