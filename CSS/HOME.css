@@ -20,6 +20,7 @@ body{
 }
 #intro-pic{
     position:absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
     /* margin-left:35px;; */
@@ -29,6 +30,7 @@ body{
 }
 #Hi-homie{
     position:absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
      margin-top:290px; 

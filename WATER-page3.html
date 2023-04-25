@@ -38,8 +38,24 @@
 
       let result=document.querySelector(".First-part")
       let inner=result.querySelector(".empty");
-      
       inner.innerHTML=total;
+
+      // setting the date of the bill
+
+      let x=new Date()
+      let final=x.toLocaleDateString('en-eu');
+      console.log(final)
+
+      let current=document.getElementsByClassName('First-part')[1];
+      let data1=current.querySelector(".empty");
+      data1.innerHTML=final;
+      // getting due date 
+      x.setDate(x.getDate()+10);
+      let futureDate=x.toLocaleDateString();
+      console.log(futureDate)
+      let future=document.getElementsByClassName('First-part')[2];
+      let duedate=future.querySelector('.empty');
+      duedate.innerHTML=futureDate;
 
     </script>
         
