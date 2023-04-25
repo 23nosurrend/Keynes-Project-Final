@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/MOMO-Page3.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Recevied/Sent</th>
+        </tr>
+        <tr>
+            <td id="date1"></td>
+            <td id="name1"></td>
+            <td id="tel1"></td>
+            <td id="reason1"></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+console.log("hello");
+
+let data=localStorage.getItem("final-message");
+console.log(data)
+
+let different=data.split("*165*")
+console.log(different)
+console.log("this is the length below");
+console.log(different.length);
+
+const info1=different[1];
+console.log(info1)
+// I am going to use regex to extract information i want 
+
+let reg=/\d{12}/g;
+  let final=info1.match(reg);
+   console.log(final)
+// inserting number into table
+let row1=document.getElementById("tel1");
+row1.innerHTML=final[0]
+// inserting date
+let reg2=/\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/g;
+let date=info1.match(reg2);
+console.log(date)
+let duration=document.getElementById("date1");
+     duration.innerHTML=date[0];
+// inserting name
+let reg3=/from\s([a-zA-Z\s]+)\s/;
+let name=info1.match(reg3);
+console.log(name[0]);
+
+let source=document.getElementById("name1");
+    source.innerHTML=name[0]
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
